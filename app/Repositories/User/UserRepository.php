@@ -1,17 +1,10 @@
 <?php
 namespace App\Repositories\User;
+use App\Repositories\BaseRepository;
 use App\User;
 
 
-class UserRepository implements UserInterface {
+class UserRepository extends BaseRepository implements UserInterface {
 
-	public function all()
-	{
-		return User::all();
-	}
-
-	public function findById($id)
-	{
-		return User::findOrFail($id);
-	}
+	protected $modelName = "App\User";
 }
