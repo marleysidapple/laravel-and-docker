@@ -2,10 +2,9 @@
 
 namespace App\Repositories\User;
 
-interface UserInterface{
-	
-	public function all();
+use App\Repositories\BaseInterface;
 
-	public function findById($id);
+interface UserInterface extends BaseInterface{
+	
 
 }
