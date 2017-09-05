@@ -55,7 +55,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $findById = $this->user->findById($id);
+        return response()->json($findById);
     }
 
     /**
