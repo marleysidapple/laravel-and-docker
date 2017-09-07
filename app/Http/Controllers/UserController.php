@@ -47,13 +47,11 @@ class UserController extends Controller
     public function show($id)
     {
         $findById = $this->user->findById($id);
-        // if you want to pass the relation, use this
-        // second params is a relation being passed as an array
-        //$user = $this->user->findById($id, ['orders'])
         return response()->json($findById);
     }
 
 
+    // an example how a repository pattern could be used for passing the relation
     public function showWithId($id)
     {
         $user = $this->user->find($id, ['address']);
