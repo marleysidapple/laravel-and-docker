@@ -54,4 +54,11 @@ class UserController extends Controller
     }
 
 
+    public function showWithId($id)
+    {
+        $user = $this->user->find($id, ['address']);
+        return response()->json($user);
+    }
+
+
 }

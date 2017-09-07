@@ -12,13 +12,13 @@ class BaseRepository {
 	}
 
 	//for relation
-	/*
+	
 	public function find($id, $relations = array())
 	{
 		$instance = $this->getNewInstance();
 		return $instance->with($relations)->find($id);
 	}
-	*/
+	
 
 	public function findById($id)
 	{

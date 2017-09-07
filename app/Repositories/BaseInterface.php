@@ -8,6 +8,8 @@ interface BaseInterface {
 
 	public function findById($id);
 
+	public function find($id, $relations=array());
+
 	/*
 	public function paginate($count);
 
