@@ -23,7 +23,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        return response()->json($this->user->all());
+        $user = $this->user->all();
+        return response()->json($user);
     }
 
     /**
