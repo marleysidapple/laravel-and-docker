@@ -27,16 +27,6 @@ class UserController extends Controller
         return response()->json($user);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
     
 
     /**
@@ -59,5 +49,10 @@ class UserController extends Controller
         return response()->json($user);
     }
 
+    public function showWithAddress()
+    {
+        $user = $this->user->allWithRelation(['address']);
+        return response()->json($user);
+    }
 
 }

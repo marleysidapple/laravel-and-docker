@@ -10,8 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/user', 'UserController@index');
+Route::get('user', 'UserController@index');
 
-Route::get('/user/{id?}', 'UserController@show');
+Route::get('user/{id?}', 'UserController@show');
 
-Route::get('/user/relation/{id?}', 'UserController@showWithId');
+Route::get('user/relation/{id?}', 'UserController@showWithId');
+
+Route::get('details', 'UserController@showWithAddress');

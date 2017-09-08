@@ -11,6 +11,13 @@ class BaseRepository {
 		return $instance->all();
 	}
 
+
+	public function allWithRelation($relations = array())
+	{
+		$instance = $this->getNewInstance();
+		return $instance->with($relations)->get();
+	}
+
 	//for relation
 	
 	public function find($id, $relations = array())
