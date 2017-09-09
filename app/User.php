@@ -1,10 +1,10 @@
 <?php
 
 namespace App;
-use App\Address;
 
-use Illuminate\Notifications\Notifiable;
+use App\Address;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -28,10 +28,14 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
- 
- public function address()
- {
-    return $this->hasMany('App\Address');
- }
+    public function address()
+    {
+        return $this->hasMany('App\Address');
+    }
+
+    public function phones()
+    {
+        
+    }
 
 }
