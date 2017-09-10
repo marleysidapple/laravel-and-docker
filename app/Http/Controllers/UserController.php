@@ -28,13 +28,6 @@ class UserController extends Controller
     }
 
     
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $findById = $this->user->findById($id);
@@ -53,17 +46,6 @@ class UserController extends Controller
     {
         $user = $this->user->allWithRelation(['address']);
         return response()->json($user);
-    }
-
-
-    public function showWithMultiplePhone()
-    {
-        //here
-    }
-
-    public function storeUser()
-    {
-        
     }
 
 }
