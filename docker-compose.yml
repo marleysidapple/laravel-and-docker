@@ -37,5 +37,10 @@ services:
     ports:
         - "33061:3306"
 
+  redis:
+    image: redis:3.2.10   
+
 volumes:
   dbdata:
+
+    

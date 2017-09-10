@@ -55,4 +55,12 @@ class UserController extends Controller
         return response()->json($user);
     }
 
+
+    public function showWithMultiplePhone()
+    {
+        //here
+    }
+
+    public function storeUser()
+
 }
